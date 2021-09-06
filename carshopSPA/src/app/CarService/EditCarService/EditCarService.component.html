@@ -1,0 +1,45 @@
+
+<div class="container" *ngIf="servisedit != null">
+  <div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 text-center">
+  <h2 class="text-black-50">
+    EditCarService !
+  </h2>
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <input hidden [(ngModel)]="servisedit.id" name="servisedit.id">
+    <label class="form-label">serviceName</label>
+    <input [(ngModel)]="servisedit.serviceName" name="servisedit.serviceName"  class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Price</label>
+    <input readonly [(ngModel)]="servisedit.price" name="servisedit.price" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">warnings</label>
+    <input [(ngModel)]="servisedit.warnings" name="servisedit.warnings" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">recommendations</label>
+    <input [(ngModel)]="servisedit.recommendations" name="servisedit.recommendations" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">dateOfServiced</label>
+    <input [(ngModel)]="servisedit.dateOfServiced" name="servisedit.dateOfServiced" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">dateofServiceWarranty</label>
+    <input [(ngModel)]="servisedit.dateofServiceWarranty" name="servisedit.dateofServiceWarranty" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">selectedCar</label>
+    <input readonly [(ngModel)]="servisedit.selectedCar" name="servisedit.selectedCar" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button class="btn btn-warning" (click)="blist()" >Back to list</button>
+</form>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>

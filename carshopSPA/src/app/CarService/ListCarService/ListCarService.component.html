@@ -1,0 +1,69 @@
+
+<!--<code>NgbPagination</code>-->
+<div class="container">
+<div *ngIf="ListCarServiceVM != null" >
+<div class="text-center mt-4">
+  <h2 >Services list: </h2>
+
+  <h4>Search cars by name : </h4>
+</div>
+<div class="input-group w-50 mt-4 mx-auto text-center">
+  <input [(ngModel)]="trazi" (input)="pretraga()" type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+    aria-describedby="search-addon" />
+  <button (click)="pretraga()" class="btn btn-warning">Search</button>
+</div>
+<table class="table table-striped mt-4">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Service Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Car name</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Details</th>
+    <th scope="col">Remove</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let servis of servisi">
+    <th >{{ servis.id }}</th>
+    <th >{{ servis.serviceName }}</th>
+    <td>{{ servis.price }}</td>
+    <td>{{ servis.carName  }}</td>
+    <td><a class="btn btn-warning" (click)="uredi(servis.id)" >Edit</a></td>
+    <td><a class="btn btn-warning" (click)="details(servis)">Details</a>
+    </td>
+   <td><a class="btn btn-danger" (click)="obrisi(servis)">Delete</a></td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="ListCarServiceVM.total" [(page)]="currentPage" [pageSize]="pageSize" [maxSize]="20" [rotate]="true" [boundaryLinks]="true" (pageChange)="pageNumberChanged($event)">
+  </ngb-pagination>
+</div>
+</div>
+<app-DetailsCarService [servis]="DetailCarServiceVM"></app-DetailsCarService>
+<app-EditCarService [servisedit]="EditCarServiceVM"></app-EditCarService>
+<router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

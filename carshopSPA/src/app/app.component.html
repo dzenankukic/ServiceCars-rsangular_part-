@@ -1,0 +1,55 @@
+<!--<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <a ngbNavLink>Dez</a>
+    <ng-template ngbNavContent>
+      <p>Add cars , add service </p>
+    </ng-template>
+  </li>
+  <li ngbNavItem>
+    <a ngbNavLink>Details</a>
+    <ng-template ngbNavContent>
+      <p>Because default values have been customized in the config</p>
+      <app-ListCarService></app-ListCarService>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>-->
+<div class="container mt-2">
+<div class="row mt-4">
+  <div class="col-2"></div>
+<div class="col-4">
+  <h2>Add new car service</h2>
+  <p>If you want to add new service click here</p>
+  <a class="btn btn-warning" routerLink="/addnew" routerLinkActive="active" >New service</a>
+</div>
+<div class="col-4">
+  <h2>See list of services</h2>
+  <p>If you want to see or edit services click here</p>
+  <a class="btn btn-warning" routerLink="/list" routerLinkActive="active" >Service list</a>
+</div>
+<div class="col-4"></div>
+  <div class="col-2"></div>
+</div>
+</div>
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<h2>Wellcome</h2>
+<br>
+<app-ListCarService></app-ListCarService>
+<router-outlet></router-outlet>
+-->

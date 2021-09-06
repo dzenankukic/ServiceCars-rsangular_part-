@@ -1,0 +1,38 @@
+
+<div class="container" *ngIf="servis != null">
+  <div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 text-center">
+  <h2 class="text-black-50">
+  DetailsCarService !
+  </h2>
+<form>
+  <div class="mb-3">
+    <label class="form-label">Service name</label>
+    <input readonly value="{{servis.serviceName}}" class="form-control" >
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Price</label>
+    <input readonly value="{{servis.price}}" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">DateOfServiced</label>
+    <input readonly value="{{servis.dateOfServiced}}" class="form-control">
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Warnings</label>
+    <input readonly value="{{servis.warnings}}" class="form-control" >
+
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Recommendations</label>
+    <input readonly value="{{servis.recommendations}}" class="form-control">
+
+  </div>
+  <button class="btn btn-warning" (click)="blist()" >Back to list</button>
+
+</form>
+</div>
+<div class="col-md-3"></div>
+</div>
+</div>
